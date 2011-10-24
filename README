@@ -1,0 +1,4 @@
+CHIP 8 EMULATOR
+=================
+
+A simple Chip8 emulator in C using SDL for UI
