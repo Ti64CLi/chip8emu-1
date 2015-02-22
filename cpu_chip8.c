@@ -247,7 +247,9 @@ void		load_rom(chip8* cpu, const char* filename)
     printf("chip8emu::load_rom::File not found\n");
     exit(-1);
   }
-  read(fd, &cpu->memory[MEMORY_ROM_START], nfo.st_size);
+  if (read(fd, &cpu->memory[MEMORY_ROM_START], nfo.st_size) != nfo.st_size) {
+    printf("chip8emu::load_rom::Read error\n");
+  }
   close(fd);
 }
 
