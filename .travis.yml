@@ -1,0 +1,9 @@
+language: c
+
+compiler:
+    - gcc
+
+before_install:
+    - sudo apt-get install libsdl1.2-dev
+
+script: make
